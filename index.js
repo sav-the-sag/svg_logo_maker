@@ -5,3 +5,5 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // import classes from .lib/shapes directory
+const { Triangle, Square, Circle } = require("./lib/shapes");
+
