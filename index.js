@@ -18,4 +18,17 @@ function writeToFile(fileName, answers) {
     svgString += "<g>";
     // Takes user input for shape choice and inserts it into SVG file
     svgString += `${answers.shape}`;
+
+    // Conditional check takes users input from choices array and then adds polygon properties and shape color to SVG string
+    let shapeChoice;
+    if (answers.shape === "Triangle") {
+        shapeChoice = new Triangle();
+        svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeBackgroundColor}"/>`;
+    } else if (answers.shape === "Square") {
+        shapeChoice = new Square();
+        svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`;
+    } else {
+        shapeChoice = new Circle();
+        svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
+    }
 }
