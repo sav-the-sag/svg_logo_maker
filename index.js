@@ -71,5 +71,12 @@ function promptUser() {
                 choices: ["Triangle", "Square", "Circle"],
                 name: "shape",
             },
+            // shape color prompt
+            {
+                type: "input",
+                message:
+                    "Choose shapes color (Enter color keyword OR a hexadecimal number)",
+                name: "shapeBackgroundColor",
+            },
         ])
 }
