@@ -64,5 +64,12 @@ function promptUser() {
                     "Choose text color (Enter color keyword OR a hexadecimal number)",
                 name: "textColor",
             },
+            // shape choice prompt
+            {
+                type: "list",
+                message: "What shape would you like the logo to render?",
+                choices: ["Triangle", "Square", "Circle"],
+                name: "shape",
+            },
         ])
 }
