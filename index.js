@@ -48,13 +48,21 @@ function writeToFile(fileName, answers) {
 // this function utilizes inquirer .prompt to prompt the user to answer questions in the command line and save user input
 function promptUser() {
     inquirer
-    .prompt([
-      // text prompt
-      {
-        type: "input",
-        message:
-          "What text would you like you logo to display? (Enter up to three characters)",
-        name: "text",
-      },
-    ])
+        .prompt([
+            // text prompt
+            {
+                type: "input",
+                message:
+                    "What text would you like you logo to display? (Enter up to three characters)",
+                name: "text",
+            },
+
+            // text color prompt
+            {
+                type: "input",
+                message:
+                    "Choose text color (Enter color keyword OR a hexadecimal number)",
+                name: "textColor",
+            },
+        ])
 }
